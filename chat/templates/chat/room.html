@@ -110,14 +110,20 @@
       const msgListTag = document.createElement('li');
       const imgTag = document.createElement('img');
       const pTag = document.createElement('p');
-      pTag.textContent = data.content;
-      imgTag.src = 'http://emilcarlsson.se/assets/mikeross.png';
+      const pTag1 = document.createElement('li');
+      const pTag2 = document.createElement('li');
+      const dateTag = document.createElement('li');
+      pTag1.textContent = data.content;
+      pTag2.textContent = data.author;
+      dateTag.textContent = data.timestamp;
       if (author === username) {
         msgListTag.className = 'replies';
       } else {
         msgListTag.className = 'sent';
       }
-      msgListTag.appendChild(imgTag);
+      pTag.appendChild(pTag2);
+      pTag.appendChild(pTag1);  
+      pTag.appendChild(dateTag);    
       msgListTag.appendChild(pTag);
       document.querySelector('#chat-log').appendChild(msgListTag);
     }
