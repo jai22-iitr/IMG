@@ -10,7 +10,7 @@ ss/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Login Page</title>
+	<title>Registration Page</title>
    <!--Made with love by Mutiullah Samim -->
    
 	<!--Bootsrap 4 CDN-->
@@ -20,7 +20,7 @@ ss/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
 	<!--Custom styles-->
-	<link rel="stylesheet"  href="{% static 'style1.css' %}">
+	<link rel="stylesheet"  href="{% static 'style2.css' %}">
 
 </head>
 <body>
@@ -32,7 +32,7 @@ ss/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 				<div class="card">
 					<div class="card-header">
 						<h4 style="font-size: 50px; color: white; text-align: center;">FAN CLUB PORTAL</h4><br><br>
-						<h3>Sign In</h3>
+						<h3>Sign Up</h3>
 
 					</div>
 					<div class="card-body">
@@ -48,25 +48,23 @@ ss/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 								<div class="input-group-prepend">
 									<span class="input-group-text"><i class="fas fa-key"></i></span>
 								</div>
-								<input type="password" name="password" required_id="id_password" class="form-control" placeholder="password">
+								<input type="password" name="password1" required_id="id_password1" class="form-control" placeholder="password">
+							</div>
+							<div class="input-group form-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text"><i class="fas fa-key"></i></span>
+								</div>
+								<input type="password" name="password2" required_id="id_password2" class="form-control" placeholder="confirm password">
 							</div>
 							<div class="row align-items-center remember">
 
 							<input type="checkbox">Remember Me
 							</div>
 							<div class="form-group">
-								<input type="submit" value="Login" class="btn float-right login_btn">
+								<input type="submit" value="Register" class="btn float-right login_btn">
 							</div>
-							
-
-					
 						</form>
 					</div>
-					<div class="card-footer">
-						<div class="d-flex justify-content-center links">
-							Don't have an account?<a href="http://localhost:8000/register/">Sign Up</a>
-						</div>
-
 					</div>
 				</div>
 			</div>

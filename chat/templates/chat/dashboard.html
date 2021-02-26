@@ -4,12 +4,58 @@
     <meta charset="utf-8"/>
     <title>Chat Rooms</title>
 </head>
-<body>
-    <center>
-    <p>What chat room would you like to enter?</p><br>
-    <input id="room-name-input" type="text" size="100"><br>
-    <input id="room-name-submit" type="button" value="Enter">
+<body style="
+background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+font-family: 'Numans', sans-serif;
+">
 
+    <div class="heading" style="color: white; font-size: 60px; margin-top: 90px; text-align: center; "> Welcome To
+    FAN CLUB PORTAL </div>
+    <div class="parallel" style="display: flex; justify-content: space-around;">
+    <p style="color: white; margin-left:1600px; font-size: 30px;">{{user.username}}</p>
+    </div>
+    <br>
+    <br>
+    <div class="logout">
+        <button style="margin-left: 1750px; height: 40px; background-color: white; color: white; font-size: 30px; border-radius: 20px; border: none;" ><a href="{% url 'logout' %}" style="color: black;">Logout</a></button>
+    </div>
+    <div class="master" style="display: flex; justify-content: space-around; margin-top: 20px;">
+    <div class="suggestions" style="height: 700px; background-color: rgba(0,0,0,0.5) !important; width: 400px;">
+        <p style="color: yellow; font-size: 40px; text-align: center;">Suggestions :-</p>
+        <center>
+        <li style="text-align: center;">
+            <ul style="font-size: 30px; color: white;"><a href="https://en.wikipedia.org/wiki/List_of_Bollywood_films_of_2021" style="color: pink;">Bollywood Movies</a></ul>
+            <ul style="font-size: 30px; color: white;"><a href="https://en.wikipedia.org/wiki/List_of_Bollywood_films_of_2021" style="color: skyblue;">Hollywood Movies</a></ul>
+            <ul style="font-size: 30px; color: white;"><a href="https://en.wikipedia.org/wiki/List_of_Bollywood_films_of_2021" style="color: lightgreen;">Songs</a></ul>
+            <ul style="font-size: 30px; color: white;"><a href="https://www.rottentomatoes.com/top-tv/" style="color: orange;">T.V. Shows</a></ul>
+            <ul style="font-size: 30px; color: white;"><a href="https://www.rottentomatoes.com/top-tv/" style="color: red;">Reality shows</a></ul>
+            <ul style="font-size: 30px; color: white;"><a href="https://apastyle.apa.org/style-grammar-guidelines/references/examples/newspaper-article-references" style="color: grey;">Newspaper Articles</a></ul>
+            <ul style="font-size: 30px; color: white;"><a href="https://en.wikipedia.org/wiki/List_of_Bollywood_actors" style="color: purple;">Your Favorite Actors</a></ul>
+
+        </li>
+        </center>
+    </div>
+    <div class="container" style="background-color: rgba(0,0,0,0.5) !important; width: 900px; height: 250px; margin-top: 200px; margin-right: 20px;">
+    <p style="color: white; font-size: 30px; text-align: center;">What chat room would you like to create or enter?</p><br><br>
+    <center>
+    <input id="room-name-input" type="text" size="100" style="border: none; text-align: center; font-size: 20px; width: 800px;" ><br><br>
+    <input id="room-name-submit" type="button" value="Enter" style="height: 50px; font-size: 30px; border-radius: 20px; border: none; text-align: center; color: white; background-color: orange">
+    </center>
+    </div>
+    <div class="rooms" style="height: 400px; background-color: rgba(0,0,0,0.5) !important; width: 400px; margin-top: 100px;">
+        <p style="color: white; font-size: 40px; text-align: center;">Default Rooms</p>
+        <center>
+        <li style="text-align: center;">
+            <ul style="font-size: 30px; color: white;"><a href="http://127.0.0.1:8000/chat/Movies/" style="color: pink;">Movies</a></ul>
+            <ul style="font-size: 30px; color: white;"><a href="http://127.0.0.1:8000/chat/Songs/" style="color: skyblue;">Songs</a></ul>
+        </li>
+        </center>
+
+    </div>
+    </div>
     <script>
         document.querySelector('#room-name-input').focus();
         document.querySelector('#room-name-input').onkeyup = function(e) {
@@ -23,7 +69,11 @@
             window.location.pathname = '/chat/' + roomName + '/';
         };
     </script>
-</center>
 </body>
 </html>
 {% endblock %}
+
+
+
+
+

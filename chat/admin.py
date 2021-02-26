@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import Message
+from .models import Message 
 
-@admin.register(Message) 
-
+@admin.register(Message)
 class MessageAdmin(admin.ModelAdmin):
-	list_display = ['id', 'content', 'timestamp' , 'author' ]
+	list_display = ['id', 'content', 'timestamp' , 'author']
+

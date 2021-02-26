@@ -8,10 +8,10 @@ class Message(models.Model):
 	content = models.TextField(null=False, blank=False)
 	timestamp = models.DateTimeField(auto_now_add=True)
 	room = models.CharField(max_length=100)
+	photo = models.ImageField(null=True,blank=True,upload_to="media/myimage")
+
 	def __str__(self):
 		return self.author.username
 
 	def last_30_messages(chatconsumer):
 		return Message.objects.filter(room=chatconsumer.room_name).order_by('-timestamp').all()[:30]
-
-

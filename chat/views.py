@@ -1,9 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.views.generic import ListView, DetailView
-
 from django.contrib.auth.decorators import login_required
-from .models import Message
+from .models import Message 
 from django.utils.safestring import mark_safe
 import json
 
@@ -29,3 +28,6 @@ def room(request, room_name):
         'room_name': mark_safe(room_name),
         'username': mark_safe(request.user.username),
     })
+
+
+
