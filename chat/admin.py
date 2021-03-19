@@ -3,5 +3,5 @@ from .models import Message
 
 @admin.register(Message)
 class MessageAdmin(admin.ModelAdmin):
-	list_display = ['id', 'content', 'timestamp' , 'author']
+	list_display = ['id', 'content', 'timestamp' , 'author', 'room']
 

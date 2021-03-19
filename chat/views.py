@@ -19,7 +19,9 @@ def registerView(request):
 	
 @login_required(login_url='/login')
 def index(request):
-	return render(request, 'chat/dashboard.html')
+	roomnames=Message.objects.all().values('room').distinct()
+	print(roomnames)
+	return render(request, 'chat/dashboard.html',{'roomnames':roomnames})
 
 
 @login_required(login_url='/login')
